@@ -1,0 +1,102 @@
+#include<stdio.h>
+#define MAX 100
+struct node
+{
+	int data;
+	struct node *address; 
+}node;
+void insertatendLL(struct node*data,intdata,*head)
+{
+ struct Node* node*(struct Node* )malloc(sizeof(struct node*));
+node->data=data;
+node->add=NULL;
+if(head!=NULL)
+{
+	head=node;
+}
+else
+{
+	struct Node*
+    s=head;
+while(s->add!=NULL)
+{
+	s=s->add;
+}
+s->add=node;
+}
+
+//insert at specific location
+
+void insertatspecificlocatLL(datafter,data,node,*head)
+{
+	node->data=data;
+	node->address=NULL;
+	s=head;
+	while(s->data!=datafter)
+	{
+		s=s->head;
+	}
+	node->add;
+	s->add=next;
+}
+
+//insert at front 
+
+void insertatfrontLL(int data,,struct node*,head)
+{
+	 struct node* node=(struct node*)malloc(sizeof(struct node));
+	node->data=data;
+	node=add=NULL;
+	node->address=head->address;
+	head=node;
+	return head;
+}
+
+//display the elements of LL
+
+void displayelementofLL(struct node*,head)
+{
+	struct Node* s->head
+    while (s!=NULL)
+    {
+    	printf("%d->",s->data)
+    	s=s->address;
+    }
+}
+int main() {
+	int item,ch,after;
+	node *head;
+	head = NULL;
+		printf(" Menu is\n1.Insert element at beg ");
+		printf("\n2.Insert element at end ");
+		printf("\n3.Display element ");
+		printf("\n4.After location");
+		
+	while(1){
+	    printf("\nSelect case:");
+		scanf("%d",&ch);
+		switch(ch){
+			case 1:
+				printf("\n.Enter element:");
+				scanf("%d",&item);
+				insert_at_beg(&head,item);
+			break;
+			case 2:
+				printf("\n.Enter element at end:");
+				scanf("%d",&item);
+				insert_at_end(&head,item);
+			break;
+			case 3:
+			    printf("\n.Display element:");
+				display(head);
+			break;
+			case 4:
+				printf("\n.Enter element and element after you want to insert:");
+				scanf("%d %d",&item,&after);
+				insert_after_loc(&head,item,after);
+			break;
+		default:exit(1);
+		}
+	}
+	return 0;
+}
