@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Node
+{
+	int data;
+	struct node* next;
+};
+
+void middleelementLL(struct Node *head,intdata)
+{
+	 Node *first_ptr = head;
+	 Node *second_ptr = head;
+	
+	if(head!=NULL)
+	{
+		while (second_ptr !=NULL && second_ptr->next !=NULL)
+		{
+			second_ptr = second_ptr->next->next;
+			first_ptr = first_ptr->next;
+		}
+		printf("The middle element in the the linked list is: %d",first_ptr->data);
+	}
+}
